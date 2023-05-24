@@ -157,7 +157,7 @@ ul {
 .slide--row {
   position: relative;
   display: flex;
-  height: 200px;
+  height: 250px;
   justify-content: space-evenly;
   gap: 25px;
   transform: rotate(-10deg) translateY(-1vh);
@@ -165,56 +165,208 @@ ul {
 .slide--row .slides {
   position: absolute;
   left: -350px;
-  width: 300px;
+  width: 320px;
   height: 100%;
   border: 3px dashed white;
   border-radius: 10px;
-  animation: slideShowInBack 14s LINEAR infinite;
+  animation: slideShowInBack 28s LINEAR infinite;
+  background-size: cover;
+  background-position: center;
 }
 .slide--row .slides:nth-child(7n+1) {
   animation-delay: 0s;
 }
-.slide--row .slides:nth-child(7n+2) {
-  animation-delay: 2s;
+.slide--row .slides.paused {
+  animation-play-state: paused;
 }
-.slide--row .slides:nth-child(7n+3) {
+.slide--row .slides:nth-child(7n+2) {
   animation-delay: 4s;
 }
-.slide--row .slides:nth-child(7n+4) {
-  animation-delay: 6s;
+.slide--row .slides.paused {
+  animation-play-state: paused;
 }
-.slide--row .slides:nth-child(7n+5) {
+.slide--row .slides:nth-child(7n+3) {
   animation-delay: 8s;
 }
-.slide--row .slides:nth-child(7n+6) {
-  animation-delay: 10s;
+.slide--row .slides.paused {
+  animation-play-state: paused;
 }
-.slide--row .slides:nth-child(7n+7) {
+.slide--row .slides:nth-child(7n+4) {
   animation-delay: 12s;
 }
+.slide--row .slides.paused {
+  animation-play-state: paused;
+}
+.slide--row .slides:nth-child(7n+5) {
+  animation-delay: 16s;
+}
+.slide--row .slides.paused {
+  animation-play-state: paused;
+}
+.slide--row .slides:nth-child(7n+6) {
+  animation-delay: 20s;
+}
+.slide--row .slides.paused {
+  animation-play-state: paused;
+}
+.slide--row .slides:nth-child(7n+7) {
+  animation-delay: 24s;
+}
+.slide--row .slides.paused {
+  animation-play-state: paused;
+}
+.slide--row .slides:nth-child(1) {
+  background-image: url("./src/images/dogs/dogs1.jpg");
+}
+.slide--row .slides:nth-child(2) {
+  background-image: url("./src/images/dogs/dogs2.jpg");
+}
+.slide--row .slides:nth-child(3) {
+  background-image: url("./src/images/dogs/dogs3.jpg");
+}
+.slide--row .slides:nth-child(4) {
+  background-image: url("./src/images/dogs/dogs4.jpg");
+}
+.slide--row .slides:nth-child(5) {
+  background-image: url("./src/images/dogs/dogs5.jpg");
+}
+.slide--row .slides:nth-child(6) {
+  background-image: url("./src/images/dogs/dogs6.jpg");
+}
+.slide--row .slides:nth-child(7) {
+  background-image: url("./src/images/dogs/dogs7.jpg");
+}
+.slide--row .slides:nth-child(8) {
+  background-image: url("./src/images/dogs/dogs8.jpg");
+}
+.slide--row .slides:nth-child(9) {
+  background-image: url("./src/images/dogs/dogs9.jpg");
+}
+.slide--row .slides:nth-child(10) {
+  background-image: url("./src/images/dogs/dogs10.jpg");
+}
 .slide--row:nth-child(2n) .slides {
-  animation: slideShowInBackRev 14s linear infinite;
+  animation: slideShowInBackRev 28s linear infinite;
 }
 .slide--row:nth-child(2n) .slides:nth-child(7n+1) {
   animation-delay: 0s;
 }
 .slide--row:nth-child(2n) .slides:nth-child(7n+2) {
-  animation-delay: 2s;
-}
-.slide--row:nth-child(2n) .slides:nth-child(7n+3) {
   animation-delay: 4s;
 }
-.slide--row:nth-child(2n) .slides:nth-child(7n+4) {
-  animation-delay: 6s;
-}
-.slide--row:nth-child(2n) .slides:nth-child(7n+5) {
+.slide--row:nth-child(2n) .slides:nth-child(7n+3) {
   animation-delay: 8s;
 }
+.slide--row:nth-child(2n) .slides:nth-child(7n+4) {
+  animation-delay: 12s;
+}
+.slide--row:nth-child(2n) .slides:nth-child(7n+5) {
+  animation-delay: 16s;
+}
 .slide--row:nth-child(2n) .slides:nth-child(7n+6) {
-  animation-delay: 10s;
+  animation-delay: 20s;
 }
 .slide--row:nth-child(2n) .slides:nth-child(7n+7) {
-  animation-delay: 12s;
+  animation-delay: 24s;
+}
+.slide--row:nth-child(2n) .slides:nth-child(1) {
+  background-image: url("./src/images/dogs/dogs11.jpg");
+}
+.slide--row:nth-child(2n) .slides:nth-child(2) {
+  background-image: url("./src/images/dogs/dogs12.jpg");
+}
+.slide--row:nth-child(2n) .slides:nth-child(3) {
+  background-image: url("./src/images/dogs/dogs13.jpg");
+}
+.slide--row:nth-child(2n) .slides:nth-child(4) {
+  background-image: url("./src/images/dogs/dogs14.jpg");
+}
+.slide--row:nth-child(2n) .slides:nth-child(5) {
+  background-image: url("./src/images/dogs/dogs15.jpg");
+}
+.slide--row:nth-child(2n) .slides:nth-child(6) {
+  background-image: url("./src/images/dogs/dogs16.jpg");
+}
+.slide--row:nth-child(2n) .slides:nth-child(7) {
+  background-image: url("./src/images/dogs/dogs17.jpg");
+}
+.slide--row:nth-child(2n) .slides:nth-child(8) {
+  background-image: url("./src/images/dogs/dogs18.jpg");
+}
+.slide--row:nth-child(2n) .slides:nth-child(9) {
+  background-image: url("./src/images/dogs/dogs19.jpg");
+}
+.slide--row:nth-child(2n) .slides:nth-child(10) {
+  background-image: url("./src/images/dogs/dogs20.jpg");
+}
+.slide--row:nth-child(2n) .slides.paused {
+  animation-play-state: paused;
+}
+.slide--row:nth-child(3n) .slides:nth-child(1) {
+  background-image: url("./src/images/dogs/dogs21.jpg");
+}
+.slide--row:nth-child(3n) .slides:nth-child(2) {
+  background-image: url("./src/images/dogs/dogs22.jpg");
+}
+.slide--row:nth-child(3n) .slides:nth-child(3) {
+  background-image: url("./src/images/dogs/dogs23.jpg");
+}
+.slide--row:nth-child(3n) .slides:nth-child(4) {
+  background-image: url("./src/images/dogs/dogs24.jpg");
+}
+.slide--row:nth-child(3n) .slides:nth-child(5) {
+  background-image: url("./src/images/dogs/dogs25.jpg");
+}
+.slide--row:nth-child(3n) .slides:nth-child(6) {
+  background-image: url("./src/images/dogs/dogs26.jpg");
+}
+.slide--row:nth-child(3n) .slides:nth-child(7) {
+  background-image: url("./src/images/dogs/dogs27.jpg");
+}
+.slide--row:nth-child(3n) .slides:nth-child(8) {
+  background-image: url("./src/images/dogs/dogs28.jpg");
+}
+.slide--row:nth-child(3n) .slides:nth-child(9) {
+  background-image: url("./src/images/dogs/dogs29.jpg");
+}
+.slide--row:nth-child(3n) .slides:nth-child(10) {
+  background-image: url("./src/images/dogs/dogs30.jpg");
+}
+.slide--row:nth-child(3n) .slides.paused {
+  animation-play-state: paused;
+}
+.slide--row:nth-child(4n) .slides:nth-child(1) {
+  background-image: url("./src/images/dogs/dogs31.jpg");
+}
+.slide--row:nth-child(4n) .slides:nth-child(2) {
+  background-image: url("./src/images/dogs/dogs32.jpg");
+}
+.slide--row:nth-child(4n) .slides:nth-child(3) {
+  background-image: url("./src/images/dogs/dogs33.jpg");
+}
+.slide--row:nth-child(4n) .slides:nth-child(4) {
+  background-image: url("./src/images/dogs/dogs34.jpg");
+}
+.slide--row:nth-child(4n) .slides:nth-child(5) {
+  background-image: url("./src/images/dogs/dogs35.jpg");
+}
+.slide--row:nth-child(4n) .slides:nth-child(6) {
+  background-image: url("./src/images/dogs/dogs36.jpg");
+}
+.slide--row:nth-child(4n) .slides:nth-child(7) {
+  background-image: url("./src/images/dogs/dogs37.jpg");
+}
+.slide--row:nth-child(4n) .slides:nth-child(8) {
+  background-image: url("./src/images/dogs/dogs38.jpg");
+}
+.slide--row:nth-child(4n) .slides:nth-child(9) {
+  background-image: url("./src/images/dogs/dogs39.jpg");
+}
+.slide--row:nth-child(4n) .slides:nth-child(10) {
+  background-image: url("./src/images/dogs/dogs40.jpg");
+}
+.slide--row:nth-child(4n) .slides.paused {
+  animation-play-state: paused;
 }
 
 @keyframes slideShowInBack {

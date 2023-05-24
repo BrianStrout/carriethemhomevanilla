@@ -13,7 +13,8 @@
 .slide--row {
   position: relative;
   display: flex;
-  height: 200px;
+  height: 250px;
+
   justify-content: space-evenly;
   gap: 25px;
 
@@ -22,29 +23,84 @@
   .slides {
     position: absolute;
     left: -350px;
-    width: 300px;
+    width: 320px;
     height: 100%;
     border: 3px dashed white;
     border-radius: 10px;
-    animation: slideShowInBack 14s LINEAR infinite;
+    animation: slideShowInBack 28s LINEAR infinite;
     // animation-delay: ;
 
-    $delays: 0s, 2s, 4s, 6s, 8s, 10s, 12s;
+    // background-color: pink;
+    // background-image: url("./src/images/dogs/1ad6cdf8-6642-4e45-b232-bbda8b15a6e5.jpg");
+    background-size: cover;
+    background-position: center;
+
+    $delays: 0s, 4s, 8s, 12s, 16s, 20s, 24s;
     @for $i from 1 through length($delays) {
       &:nth-child(#{length($delays)}n + #{$i}) {
         animation-delay: nth($delays, $i);
+      }
+
+      &.paused {
+        animation-play-state: paused;
+      }
+    }
+
+    @for $i from 1 through 10 {
+      &:nth-child(#{$i}) {
+        background-image: url("./src/images/dogs/dogs#{$i}.jpg");
       }
     }
   }
 
   &:nth-child(2n) {
     .slides {
-      animation: slideShowInBackRev 14s linear infinite;
-      $delays: 0s, 2s, 4s, 6s, 8s, 10s, 12s;
+      animation: slideShowInBackRev 28s linear infinite;
+      $delays: 0s, 4s, 8s, 12s, 16s, 20s, 24s;
       @for $i from 1 through length($delays) {
         &:nth-child(#{length($delays)}n + #{$i}) {
           animation-delay: nth($delays, $i);
         }
+      }
+
+      @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+          $j: #{$i + 10};
+
+          background-image: url("./src/images/dogs/dogs#{$j}.jpg");
+        }
+      }
+      &.paused {
+        animation-play-state: paused;
+      }
+    }
+  }
+
+  &:nth-child(3n) {
+    .slides {
+      @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+          $j: #{$i + 20};
+
+          background-image: url("./src/images/dogs/dogs#{$j}.jpg");
+        }
+      }
+      &.paused {
+        animation-play-state: paused;
+      }
+    }
+  }
+  &:nth-child(4n) {
+    .slides {
+      @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+          $j: #{$i + 30};
+
+          background-image: url("./src/images/dogs/dogs#{$j}.jpg");
+        }
+      }
+      &.paused {
+        animation-play-state: paused;
       }
     }
   }
