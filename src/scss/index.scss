@@ -1,0 +1,56 @@
+@use "landing";
+@use "root";
+@use "slides";
+:root {
+  --letter-sizing: 45px;
+}
+
+.site--shell {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.business--card-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  height: 85vh;
+  flex-grow: 1;
+  // border: 5px solid pink;
+  overflow: hidden;
+
+  .title--container {
+    position: absolute;
+    z-index: 20;
+    top: calc(-1 * var(--letter-sizing) - 10px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    // background-color: lime;
+  }
+  .title--letter {
+    // border: 1px solid black;
+    width: calc(0.8 * var(--letter-sizing));
+    height: var(--letter-sizing);
+    // margin-right: -10px;
+    background-color: rgba(255, 255, 255, 0.818);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--header-font);
+    font-size: 270%;
+
+    transition: 0.25s all ease-out;
+    &.drop--in {
+      transform: translateY(calc(20px + var(--letter-sizing)));
+    }
+  }
+}
+
+.trans {
+  opacity: 0;
+}

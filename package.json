@@ -1,0 +1,22 @@
+{
+  "name": "carriethemhomevanilla",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrianStrout/carriethemhomevanilla.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrianStrout/carriethemhomevanilla/issues"
+  },
+  "homepage": "https://github.com/BrianStrout/carriethemhomevanilla#readme",
+  "dependencies": {
+    "sass": "^1.62.1"
+  }
+}
