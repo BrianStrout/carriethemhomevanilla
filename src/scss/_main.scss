@@ -1,0 +1,90 @@
+:root {
+  --nav-ms: 200px;
+}
+.main--card {
+  position: absolute;
+  z-index: 40;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 228, 196, 0.351);
+  transition: all 1s ease-out;
+}
+.sec--card {
+  position: absolute;
+  z-index: 40;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(238, 210, 175);
+  transition: all 1s ease-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid--box {
+  margin-top: 120px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 10%;
+  width: 480px;
+  // height: 800px;
+  // background-color: darkviolet;
+  overflow-y: scroll;
+  > div {
+    border: 1px solid black;
+  }
+
+  .grid1 {
+    display: grid;
+    grid-template-rows: 400px auto;
+    // background-color: darkviolet;
+    .grid--img {
+      background-image: url("./src/images/dogs/dogs1.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+    .grid--blurb {
+      background-color: aqua;
+      padding: 8px 16px;
+      overflow-wrap: break-word;
+      // overflow-x: hidden;
+    }
+  }
+  .grid2 {
+    display: grid;
+    grid-template-rows: 400px auto;
+    // background-color: blue;
+    .grid--img {
+      background-image: url("./src/images/humanelogo.png");
+      background-size: cover;
+      background-position: center;
+    }
+    .grid--blurb {
+      background-color: aqua;
+      padding: 8px 16px;
+      overflow-wrap: break-word;
+      // overflow-x: hidden;
+    }
+    // background-color: blue;
+  }
+}
+
+// }
+// <div class="grid1">
+//   <div class="grid--img"></div>
+//   <div class="grid--blurb"></div>
+// </div>
+// <div class="grid2">
+//   <div class="grid--img"></div>
+//   <div class="grid--blurb"></div>
+// </div>
+// </div>
+
+@media all and (max-width: 1023px) and (orientation: portrait) {
+}
+
+@media only screen and (max-width: 768px) {
+}

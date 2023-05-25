@@ -12,7 +12,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: 241%;
-    transition: opacity 1.25s ease-out, background-size 1.5s ease-out;
+    transition: opacity 1.25s ease-out, background-size 2s ease-in-out;
   }
   .photo--zoomed {
     background-size: 100%;

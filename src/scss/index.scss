@@ -1,6 +1,11 @@
 @use "landing";
+@use "navigation";
+@use "form";
 @use "root";
 @use "slides";
+@use "main";
+@use "footer";
+
 :root {
   --letter-sizing: 45px;
 }
@@ -20,11 +25,12 @@
   height: 85vh;
   flex-grow: 1;
   // border: 5px solid pink;
-  overflow: hidden;
+  // overflow: hidden;
+  // overflow-y: hidden;
 
   .title--container {
     position: absolute;
-    z-index: 20;
+    z-index: 90;
     top: calc(-1 * var(--letter-sizing) - 10px);
     width: 100%;
     display: flex;
@@ -45,12 +51,23 @@
     font-size: 270%;
 
     transition: 0.25s all ease-out;
+    opacity: 0;
     &.drop--in {
       transform: translateY(calc(20px + var(--letter-sizing)));
+      opacity: 1;
     }
   }
 }
 
 .trans {
   opacity: 0;
+}
+
+@media all and (max-width: 1023px) and (orientation: portrait) {
+  .site--shell {
+    align-items: flex-start;
+  }
+}
+
+@media only screen and (max-width: 768px) {
 }

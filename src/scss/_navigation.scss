@@ -1,0 +1,37 @@
+.navigation {
+  position: absolute;
+  z-index: 70;
+  right: calc(-1 * var(--nav-ms));
+  top: 0;
+  height: 100%;
+  // background-color: rgba(240, 248, 255, 0.229);
+  min-width: var(--nav-ms);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  overflow: hidden;
+  // pointer-events: none;
+
+  > div {
+    transition: all 0.6s cubic-bezier(0.83, 0.08, 0.67, 1.14);
+  }
+
+  .nav--link {
+    border: 5px solid black;
+    padding: 5px;
+    width: fit-content;
+    font-size: 2.5rem;
+    background-color: antiquewhite;
+    // pointer-events: none;
+  }
+  .nav--hero {
+    width: 100px;
+    height: 100px;
+    border: 5px solid black;
+    border-radius: 50%;
+    background-image: url("./src/images/dogs/dogs18.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+}

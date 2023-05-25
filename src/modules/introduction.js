@@ -20,6 +20,27 @@ const introduce = () => {
 
   setTimeout(() => {
     Animator("class", "title--letter", "add", "drop--in", 50);
+    // document.querySelectorAll(".paused").forEach((slide) => {
+    //   slide.classList.remove("paused");
+    // });
   }, 3000);
+
+  setTimeout(() => {
+    document.getElementById("mainCard").classList.remove("transition--cover");
+
+    document.querySelectorAll(".slides").forEach((slide) => {
+      slide.classList.remove("paused");
+    });
+  }, 5000);
+  setTimeout(() => {
+    document.querySelectorAll(".nav--hero").forEach((link) => {
+      link.classList.remove("transition--cover");
+    });
+  }, 6500);
+  setTimeout(() => {
+    document.querySelectorAll(".nav--link").forEach((link) => {
+      link.classList.remove("transition--cover");
+    });
+  }, 7500);
 };
 export { introduce };

@@ -78,6 +78,9 @@ ul {
   &.offset--down {
     transform: translateY(100vh);
   }
+  &.offset--left-soft {
+    transform: translateX(-120%);
+  }
   &.offset--left {
     transform: translateX(-100vw);
   }
@@ -88,6 +91,9 @@ ul {
   &.faded--down {
     transform: translateY(100%);
     opacity: 0%;
+  }
+  &.shrunk {
+    scale: 0;
   }
 }
 
