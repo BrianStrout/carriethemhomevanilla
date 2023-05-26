@@ -1,4 +1,11 @@
 import { introduce } from "./src/modules/introduction.js";
+import {
+  verName,
+  verEmail,
+  verMessage,
+  validator,
+} from "./src/modules/formValidation.js";
+import { mobileMenu } from "./src/modules/mobileMenu.js";
 
 introduce();
 
@@ -11,6 +18,7 @@ const clearCards = () => {
 };
 
 document.addEventListener("click", (e) => {
+  e.preventDefault();
   // console.log(e.target);
   switch (e.target.id) {
     case "navmis":
@@ -36,6 +44,24 @@ document.addEventListener("click", (e) => {
       document
         .getElementById("contactCard")
         .classList.remove("transition--cover");
+      break;
+    case "navhero":
+      mobileMenu();
+
+    case "linkedin":
+      window.open(
+        "https://www.linkedin.com/in/carrie-thomas-bba30a4/",
+        "_blank"
+      );
+      break;
+    case "stroutco":
+      window.open("https://www.strout.co", "_blank");
+      break;
+
+    case "submit":
+      e.preventDefault;
+      console.log("subby");
+      validator();
       break;
   }
 });

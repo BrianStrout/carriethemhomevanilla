@@ -16,6 +16,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .business--card-container {
@@ -32,27 +33,33 @@
     position: absolute;
     z-index: 90;
     top: calc(-1 * var(--letter-sizing) - 10px);
+    top: 0;
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 
     // background-color: lime;
   }
   .title--letter {
     // border: 1px solid black;
-    width: calc(0.8 * var(--letter-sizing));
+    width: calc(3.5 * var(--letter-sizing));
     height: var(--letter-sizing);
     // margin-right: -10px;
     background-color: rgba(255, 255, 255, 0.818);
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: var(--header-font);
+    font-family: var(--letter-font);
     font-size: 270%;
 
-    transition: 0.25s all ease-out;
     opacity: 0;
+    // &.trans {
+    //   opacity: 0;
+    // }
     &.drop--in {
+      transition: all 2s ease-out;
       transform: translateY(calc(20px + var(--letter-sizing)));
       opacity: 1;
     }

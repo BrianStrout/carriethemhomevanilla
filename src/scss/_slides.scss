@@ -1,14 +1,14 @@
 .tucked--back-slides {
   position: absolute;
   z-index: -1;
-  width: 110vw;
-  height: 120vh;
+  width: 100vw;
+  height: 100vh;
   background-color: rgb(36, 37, 39);
   //   display: grid;
   //   grid-template-rows: repeat(350px);
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 80px;
   overflow: hidden;
 }
 .slide--row {

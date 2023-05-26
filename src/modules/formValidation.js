@@ -10,7 +10,7 @@ let verMessagePass = false;
 let regexp;
 
 function allFieldsValid() {
-  console.log("GOIGM FOR ALL");
+  console.log("GOING FOR ALL");
   if (verNamePass && verEmailPass && verMessagePass) {
     console.log("all fields pass!");
     submitter();
@@ -24,11 +24,14 @@ function verName(str) {
   regexp = /^[a-z a-z]+$/gi;
   if (regexp.test(str)) {
     console.log("name pass");
+    formName.classList.remove("invalid");
     verNamePass = true;
     allFieldsValid();
     return true;
   } else {
+    formName.classList.add("invalid");
     console.log("fail name");
+    console.log(formName.after);
 
     return false;
   }
@@ -38,9 +41,11 @@ function verEmail(str) {
   if (regexp.test(str)) {
     console.log("email pass");
     verEmailPass = true;
+    formEmail.classList.remove("invalid");
     allFieldsValid();
     return true;
   } else {
+    formEmail.classList.add("invalid");
     console.log("not a valid email");
     return false;
   }
@@ -50,10 +55,12 @@ function verMessage(str) {
   regexp = /.{8}/;
   if (regexp.test(str)) {
     console.log("message pass");
+    formMessage.classList.remove("invalid");
     verMessagePass = true;
     allFieldsValid();
     return true;
   } else {
+    formMessage.classList.add("invalid");
     console.log("fail");
     return false;
   }
@@ -65,46 +72,5 @@ const validator = () => {
   verEmail(document.getElementById("formEmail").value);
   verMessage(document.getElementById("formMessage").value);
 };
-
-// const formSubmit = (e) => {
-//   e.preventDefault();
-
-//   let allPass = false;
-//   let formData = {
-//     tes: "test",
-//     service_id: "service_cg4lo4s",
-//     template_id: "template_fejt36a",
-//     form: document.getElementById("myForm"),
-//     user_id: "sMWYJVw_Of2YBvfKm",
-//     template_params: {
-//       "sender-name": "James",
-//       "sender-email": "test@fake.com",
-//     },
-//   };
-
-//   let b = {
-//     bname: formSelector.name,
-//   };
-//   let bbname = formSelector.name.value;
-//   // console.log("submitting");
-//   console.log(b);
-//   const serviceID = "service_cg4lo4s";
-//   const templateID = "template_fejt36a";
-//   const tt = formData.tes;
-//   const params = {
-//     fromName: document.getElementById("fromName").value,
-//     fromEmail: document.getElementById("fromEmail").value,
-//     message: document.getElementById("message").value,
-//   };
-//   console.log(params);
-//   console.log("^^^ params");
-
-//   emailjs.send(serviceID, templateID, params).then((response) => {
-//     console.log(params);
-
-//     alert("Thanks for your email!");
-//   });
-//   return;
-// };
 
 export { verName, verEmail, verMessage, validator };

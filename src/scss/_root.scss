@@ -1,9 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Sue+Ellen+Francisco&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Buda:wght@300&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Sue+Ellen+Francisco&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Buda:wght@300&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Playfair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -27,6 +29,7 @@
   --skillsetfont: rgba(51, 51, 51, 0.243);
   --paper: #f5f5e6;
   --header-font: "Buda", cursive;
+  --letter-font: "Libre Baskerville", serif;
 
   --bad-input-text: "Hi! Please fill all sections out";
 
@@ -39,6 +42,12 @@
 ul {
   list-style: none;
 }
+
+.b {
+  display: inline;
+  font-weight: 800;
+}
+
 .ind {
   margin-left: 1rem;
 }
@@ -57,6 +66,9 @@ ul {
 }
 .under {
   text-decoration: underline;
+}
+.trans {
+  opacity: 0;
 }
 
 .transition--cover {

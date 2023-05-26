@@ -41,6 +41,7 @@ const introduce = () => {
     document.querySelectorAll(".nav--link").forEach((link) => {
       link.classList.remove("transition--cover");
     });
+    document.querySelector("footer").classList.remove("transition--cover");
   }, 7500);
 };
 export { introduce };

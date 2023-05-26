@@ -1,10 +1,12 @@
-import { formResetter } from "./formReset.js";
+// import { formResetter } from "./formReset.js";
+
+import { formSent } from "./formSent.js";
 
 const submitter = (e) => {
   // e.preventDefault();
   const formSelector = document.getElementById("contactForm");
-  const serviceID = "service_kyqoxgr";
-  const templateID = "template_36awvk9";
+  const serviceID = "service_66cs5yn";
+  const templateID = "template_43yitzb";
   emailjs
     .sendForm("contact_service", templateID, formSelector, "oYymItkIoREaVvBlM")
     .then((response) => {
@@ -12,7 +14,7 @@ const submitter = (e) => {
       // alert("SUCCESS!");
     });
 
-  formResetter();
+  formSent();
 };
 
 export { submitter };
