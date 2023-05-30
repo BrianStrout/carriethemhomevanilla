@@ -1,3 +1,4 @@
+// import { clearCards } fro
 let menuOut = false;
 let navMenu = Array.from(document.querySelectorAll(".nav--link"));
 let navHero = document.getElementById("navhero");
@@ -13,6 +14,14 @@ const mobileMenu = () => {
 
     navHero.classList.add("slide--backinline");
     menuOut = true;
+    // clearCards();
+
+    document.querySelectorAll(".sec--card").forEach((link) => {
+      if (!link.classList.contains("transition--cover"))
+        link.classList.add("transition--cover");
+      link.classList.add("hiiiit");
+    });
+
     return;
   }
   if (menuOut) {

@@ -13,7 +13,6 @@ const clearCards = () => {
   document.querySelectorAll(".sec--card").forEach((link) => {
     if (!link.classList.contains("transition--cover"))
       link.classList.add("transition--cover");
-    link.classList.add("hiiiit");
   });
 };
 
