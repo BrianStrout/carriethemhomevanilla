@@ -116,6 +116,16 @@
 }
 
 @media only screen and (max-width: 768px) {
+  #missionCard {
+    justify-content: flex-start;
+    padding-top: 16vh;
+    height: 100%;
+    overflow-y: scroll;
+  }
+  .trans--mobile {
+    opacity: 0.1;
+  }
+
   .main--card {
     justify-content: flex-end;
     align-items: center;
@@ -123,8 +133,8 @@
   .sec--card {
     max-height: 90vh;
     overflow: scroll;
-    margin-top: 10vh;
-    padding-top: 6vh;
+    // margin-top: 11vh;
+    padding-top: 16vh;
   }
   h3 {
     margin-top: 10px;

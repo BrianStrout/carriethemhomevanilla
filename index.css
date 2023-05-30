@@ -763,6 +763,15 @@ ul {
 }
 
 @media only screen and (max-width: 768px) {
+  #missionCard {
+    justify-content: flex-start;
+    padding-top: 16vh;
+    height: 100%;
+    overflow-y: scroll;
+  }
+  .trans--mobile {
+    opacity: 0.1;
+  }
   .main--card {
     justify-content: flex-end;
     align-items: center;
@@ -770,8 +779,7 @@ ul {
   .sec--card {
     max-height: 90vh;
     overflow: scroll;
-    margin-top: 10vh;
-    padding-top: 6vh;
+    padding-top: 16vh;
   }
   h3 {
     margin-top: 10px;
@@ -788,9 +796,7 @@ ul {
   }
 }
 footer {
-  position: absolute;
-  bottom: 0;
-  z-index: 50;
+  grid-area: footer;
   height: 10vh;
   max-height: 400px;
   width: 100%;
@@ -816,14 +822,12 @@ footer img {
   --letter-sizing: 45px;
 }
 
-p {
-  max-height: 100%;
-}
-
 .site--shell {
   width: 100vw;
   height: 100vh;
-  display: flex;
+  display: grid;
+  grid-template-rows: 90% 10%;
+  grid-template-areas: "body" "footer";
   justify-content: center;
   align-items: center;
   overflow: hidden;
@@ -831,10 +835,10 @@ p {
 
 .business--card-container {
   position: relative;
-  width: 100%;
+  width: 100vw;
   max-width: 800px;
-  height: 85vh;
-  flex-grow: 1;
+  height: 100%;
+  grid-area: body;
 }
 .business--card-container .title--container {
   position: absolute;

@@ -10,13 +10,17 @@
   --letter-sizing: 45px;
 }
 p {
-  max-height: 100%;
+  // max-height: 100%;
 }
 
 .site--shell {
   width: 100vw;
   height: 100vh;
-  display: flex;
+  display: grid;
+  grid-template-rows: 90% 10%;
+  grid-template-areas:
+    "body"
+    "footer";
   justify-content: center;
   align-items: center;
   overflow: hidden;
@@ -24,10 +28,10 @@ p {
 
 .business--card-container {
   position: relative;
-  width: 100%;
+  width: 100vw;
   max-width: 800px;
-  height: 85vh;
-  flex-grow: 1;
+  height: 100%;
+  grid-area: body;
   // border: 5px solid pink;
   // overflow: hidden;
   // overflow-y: hidden;

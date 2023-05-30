@@ -1,9 +1,10 @@
 @use "root";
 footer {
   // padding-top: 100%;
-  position: absolute;
-  bottom: 0;
-  z-index: 50;
+  grid-area: footer;
+  // position: absolute;
+  // bottom: 0;
+  // z-index: 50;
   height: 10vh;
   max-height: 400px;
   width: 100%;

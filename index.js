@@ -19,7 +19,7 @@ const clearCards = () => {
 
 document.addEventListener("click", (e) => {
   e.preventDefault();
-  // console.log(e.target);
+  console.log(e.target);
   switch (e.target.id) {
     case "navmis":
       clearCards();

@@ -9,7 +9,7 @@ const mobileMenu = () => {
     navMenu.forEach((link) => {
       link.classList.add("slide--out-menu");
     });
-    title.classList.add("slide--out-menu");
+    title.classList.add("trans--mobile");
 
     navHero.classList.add("slide--backinline");
     menuOut = true;
@@ -19,7 +19,7 @@ const mobileMenu = () => {
     navMenu.forEach((link) => {
       link.classList.remove("slide--out-menu");
     });
-    title.classList.remove("slide--out-menu");
+    title.classList.remove("trans--mobile");
     navHero.classList.remove("slide--backinline");
     menuOut = false;
     return;
