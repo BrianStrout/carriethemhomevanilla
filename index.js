@@ -26,27 +26,32 @@ document.addEventListener("click", (e) => {
       document
         .getElementById("missionCard")
         .classList.remove("transition--cover");
+      mobileMenu();
       break;
     case "navres":
       clearCards();
       document
         .getElementById("resourceCard")
         .classList.remove("transition--cover");
+      mobileMenu();
       break;
     case "navgal":
       clearCards();
       document
         .getElementById("galleryCard")
         .classList.remove("transition--cover");
+      mobileMenu();
       break;
     case "navcon":
       clearCards();
       document
         .getElementById("contactCard")
         .classList.remove("transition--cover");
+      mobileMenu();
       break;
     case "navhero":
       mobileMenu();
+      break;
 
     case "linkedin":
       window.open(

@@ -69,6 +69,7 @@
       // background-color: aqua;
       padding: 8px 16px;
       overflow-wrap: break-word;
+      max-width: 95vw;
       // overflow-x: hidden;
     }
   }
@@ -117,5 +118,25 @@
 @media only screen and (max-width: 768px) {
   .main--card {
     justify-content: flex-end;
+    align-items: center;
+  }
+  .sec--card {
+    max-height: 90vh;
+    overflow: scroll;
+    margin-top: 10vh;
+    padding-top: 6vh;
+  }
+  h3 {
+    margin-top: 10px;
+  }
+  .grid--box {
+    margin-top: 30px;
+    max-width: 100vw;
+    > div {
+      max-width: 100vw;
+    }
+    .grid2 {
+      margin-bottom: 10vh;
+    }
   }
 }

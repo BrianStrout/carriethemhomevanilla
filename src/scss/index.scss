@@ -9,6 +9,9 @@
 :root {
   --letter-sizing: 45px;
 }
+p {
+  max-height: 100%;
+}
 
 .site--shell {
   width: 100vw;
@@ -39,6 +42,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: all 0.6s cubic-bezier(0.83, 0.08, 0.67, 1.14);
+    &.slide--out-menu {
+      left: -50vw;
+      transition: all 0.6s cubic-bezier(0.83, 0.08, 0.67, 1.14);
+    }
 
     // background-color: lime;
   }
@@ -77,4 +85,18 @@
 }
 
 @media only screen and (max-width: 768px) {
+  :root {
+    --letter-sizing: 35px;
+  }
+
+  .business--card-container {
+    .title--container {
+      .title--letter {
+        &.drop--in {
+          transform: translateY(0);
+          font-size: 2rem;
+        }
+      }
+    }
+  }
 }

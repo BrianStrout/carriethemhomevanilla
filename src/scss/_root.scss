@@ -92,6 +92,7 @@ ul {
   }
   &.offset--left-soft {
     transform: translateX(-120%);
+    opacity: 0;
   }
   &.offset--left {
     transform: translateX(-100vw);

@@ -1,3 +1,6 @@
+#contactCard {
+  margin-top: 0px;
+}
 #contactForm {
   position: relative;
   display: flex;
@@ -50,7 +53,7 @@
   #submit {
     position: absolute;
     bottom: -60px;
-    left: calc(50% - 10px);
+    left: calc(50% - 50px);
     width: 100px;
     height: 50px;
     font-size: 1.2rem;
@@ -228,9 +231,10 @@
     margin-left: 0;
     .form-group {
       margin-bottom: 0;
+      flex-direction: column;
     }
     textarea {
-      height: 35vh;
+      height: 25vh;
     }
   }
 }

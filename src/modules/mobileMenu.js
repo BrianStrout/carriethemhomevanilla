@@ -1,13 +1,28 @@
 let menuOut = false;
+let navMenu = Array.from(document.querySelectorAll(".nav--link"));
+let navHero = document.getElementById("navhero");
+let title = document.querySelector(".title--container");
 
 const mobileMenu = () => {
+  console.log("!");
   if (!menuOut) {
-    navMenu.classlist.add("slide--out-menu");
-    navHero.classlist.add("slide--backinline");
+    navMenu.forEach((link) => {
+      link.classList.add("slide--out-menu");
+    });
+    title.classList.add("slide--out-menu");
+
+    navHero.classList.add("slide--backinline");
+    menuOut = true;
+    return;
   }
   if (menuOut) {
-    navMenu.classlist.remove("slide--out-menu");
-    navHero.classlist.remove("slide--backinline");
+    navMenu.forEach((link) => {
+      link.classList.remove("slide--out-menu");
+    });
+    title.classList.remove("slide--out-menu");
+    navHero.classList.remove("slide--backinline");
+    menuOut = false;
+    return;
   }
 };
 
