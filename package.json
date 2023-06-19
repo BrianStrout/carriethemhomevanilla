@@ -18,5 +18,6 @@
   "homepage": "https://github.com/BrianStrout/carriethemhomevanilla#readme",
   "dependencies": {
     "sass": "^1.62.1"
-  }
+  },
+  "devDependencies": {}
 }
